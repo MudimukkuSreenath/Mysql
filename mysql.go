@@ -11,8 +11,7 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql> CREATE TABLE t (i INT) ENGINE = MYISAM;
-ERROR 1046 (3D000): No database selected
+
 mysql> show engines;
 +--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
 | Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
@@ -45,8 +44,7 @@ mysql> show databases;
 
 mysql> use myisam;
 Database changed
-mysql> create table student(Id int,Name varchar(20),Address varchar(20)) ENGINE=MYISAM;
-ERROR 1050 (42S01): Table 'student' already exists
+
 mysql> show tables;
 +------------------+
 | Tables_in_myisam |
@@ -62,8 +60,7 @@ Query OK, 0 rows affected (1.68 sec)
 mysql> create table student(Id int,Name varchar(20),Address varchar(20)) ENGINE=MYISAM;
 Query OK, 0 rows affected (0.22 sec)
 
-mysql> insert into student values(1,'sreenath','nellore') ENGINE=MYISAM;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ENGINE=MYISAM' at line 1
+
 mysql> insert into student values(1,'sreenath','nellore');
 Query OK, 1 row affected (0.12 sec)
 
